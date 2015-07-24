@@ -31,6 +31,5 @@ script:
   - ln -svf ${PWD} ${srcdir}/${_realname}
   - cp ${srcdir}/PKGBUILD ~
   - msys2-prepare
-  - msys2-wrapper "pacman -S --needed --noconfirm mingw-w64-x86_64-toolchain mingw-w64-i686-toolchain mingw-w64-i686-zlib mingw-w64-i686-pkg-config mingw-w64-i686-ncurses mingw-w64-i686-libarchive mingw-w64-i686-curl mingw-w64-i686-winpthreads"
-  - msys2-wrapper "pacman -S --needed --noconfirm mingw-w64-x86_64-toolchain mingw-w64-i686-toolchain mingw-w64-i686-zlib mingw-w64-i686-pkg-config mingw-w64-i686-ncurses mingw-w64-i686-libarchive mingw-w64-i686-curl mingw-w64-i686-winpthreads"
+  - msys2-wrapper "pacman -S --needed --noconfirm mingw-w64-i686-toolchain mingw-w64-i686-zlib mingw-w64-i686-pkg-config mingw-w64-i686-ncurses mingw-w64-i686-libarchive mingw-w64-i686-curl mingw-w64-i686-winpthreads"
   - msys2-wrapper "makepkg-mingw -s --noconfirm --noprogressbar --noextract --skippgpcheck -f"
